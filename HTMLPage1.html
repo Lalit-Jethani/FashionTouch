@@ -1,0 +1,110 @@
+﻿
+
+<!DOCTYPE html>
+<style>
+body {
+  font-family: 'Arimo', sans-serif;
+}
+
+video {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+background-size: cover;
+}
+
+/*****************************/
+
+.overlay {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background: rgba(0,0,0,0.3);
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
+.overlay h1 {
+  text-align: center;
+  padding-top: 100px;
+  color: #fff;
+  font-family: inherit;
+}
+
+.overlay p{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
+  font-family: inherit;
+  margin-bottom: 20px;
+}
+
+.overlay a {
+  color: #fff;
+}
+
+.orange {
+  text-decoration: none;
+}
+ p a.orange {
+   color: #f27950;
+ }
+
+
+</style>
+<script type="text/javascript">
+    function RunOverLay() {
+        document.getElementById('idRanbeerPant').style.display = "none";
+
+        document.querySelector("video").addEventListener("timeupdate", function () {
+            if (this.currentTime > 6) {
+                document.getElementById('idRanbeerPant').style.display = "inline";
+               
+            }
+        });
+    }
+
+    window.onload = RunOverLay;
+</script>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <video  controls autoplay="" loop="" id="bgvid" poster="https://images.unsplash.com/photo-1461409971633-aa0e46732112?crop=entropy&fit=crop&fm=jpg&h=1000&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925">
+      
+        <source type="video/mp4" src="MATARGASHTI full VIDEO Song - TAMASHA Songs 2015 - Ranbir Kapoor, Deepika Padukone - T-Series.mp4"
+        <img src="https://images.unsplash.com/photo-1458724338480-79bc7a8352e4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=0e8fe82e7f50091319fdc635582bf62d" title="Your browser does not support the <video> tag">
+    </video>
+
+    <!--<div id="idRanbeerJacket" class="overlay">
+     <a href="https://www.bollywoo.ooo/movies/shop-tamasha-movie-dresses-on-bollywoo/boogy-jacket.html"><img src="https://s3-ap-southeast-1.amazonaws.com/seenitfinds/499895932a503572a0.jpg" width="50px" height="50px" /></a>  
+       
+    </div>-->
+    <div id="idRanbeerPant" class="overlay">
+        <a href="https://www.bollywoo.ooo/movies/shop-tamasha-movie-dresses-on-bollywoo/riffraff-pants.html">
+        <img src="https://www.bollywoo.ooo/media/catalog/product/b/o/boogy_jacket_riffraf_pant.gif" width="50px" height="50px" /></a>
+
+    </div>
+    <!--<div id="idDeepikaShirt" class="overlay">
+        <a href="https://www.seenit.in/quest/show/18125"><img src="" width="50px" height="50px" /></a>
+
+    </div>
+    <div id="idDeepikaTop" class="overlay">
+        <a href="https://www.bollywoo.ooo/movies/shop-tamasha-movie-dresses-on-bollywoo/gaiety-dress.html"><img src="" width="50px" height="50px" /></a>
+
+    </div>-->
+</body>
+</html>
